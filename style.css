@@ -1,84 +1,116 @@
 body {
   font-family: Inter;
   font-size: 14px;
+  background-color: hsl(0, 0%, 8%);
   color: white;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.page-background {
-  background-color: hsl(0, 0%, 8%);
-  width: 100px;
-  height: 100px;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
+* {
+  box-sizing: border-box;
   margin: 0;
-  display: grid;
-  place-items: center;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  max-width: 456px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .card {
   background-color: hsl(0, 0%, 12%);
-  z-index: 100;
-  height: fit-content;
-  width: fit-content;
+  width: 100%;
   border-radius: 14px;
-  display: grid;
-  place-items: center;
-  padding: 46px;
-}
-
-.profile-picture-container {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
 }
 
 .profile-picture {
-  width: 100px;
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin-bottom: 24px;
 }
 
 .copy {
-  place-items: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
 }
 
 h2 {
   color: hsl(75, 94%, 57%);
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 24px;
 }
 
-h3 {
+p {
   font-weight: 400;
-  padding-top: 20px;
-  padding-bottom: 18px;
+  font-size: 14px;
 }
 
 .button-container {
-  display: grid;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
-  margin: 0;
-  padding-top: 0;
 }
 
 .social-button {
   font-family: Inter;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 14px;
   color: white;
   background-color: hsl(0, 0%, 20%);
   border: none;
-  width: 364px;
+  width: 100%;
   padding: 18px;
-  border-radius: 6px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 .social-button:active {
   background-color: hsl(75, 94%, 57%);
   color: hsl(0, 0%, 8%);
+}
+
+.social-button:hover {
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 8%);
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+}
+
+.attribution a {
+   color: hsl(75, 94%, 57%); 
+}
+
+/* Mobile */
+@media (max-width: 375px) {
+  .card {
+    padding: 26px;
+  }
 }
