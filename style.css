@@ -1,3 +1,6 @@
+/* I used a lot of % for a lot of the properties for the first
+time in this project. */
+
 body {
   font-family: Inter;
   font-size: 14px;
@@ -10,12 +13,20 @@ body {
   padding: 20px;
 }
 
+/* Learned this * selector and box-sizing property from
+www.w3schools.com */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* I acutally don't know if this main styling is necessary.
+I did it to center the acttribution div because it's nested
+inside the main div and it messed up my buttons. To fix 
+that, I added a max-width that matched the example provided 
+and set the width to 100% to make it responsive. 
+I don't know if that makes sense.  */
 main {
   width: 100%;
   max-width: 456px;
@@ -23,7 +34,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 
 .card {
@@ -92,11 +102,6 @@ p {
   color: hsl(0, 0%, 8%);
 }
 
-.social-button:hover {
-  background-color: hsl(75, 94%, 57%);
-  color: hsl(0, 0%, 8%);
-}
-
 .attribution { 
   font-size: 11px; 
   text-align: center;
@@ -109,6 +114,8 @@ p {
 }
 
 /* Mobile */
+/* I don't know if this was necesarry either, but I wanted
+to practice using media queries. Understand it better now. */
 @media (max-width: 375px) {
   .card {
     padding: 26px;
